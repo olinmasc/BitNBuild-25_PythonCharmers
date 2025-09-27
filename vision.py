@@ -16,12 +16,11 @@ def analyze_image(image_file):
     if not API_KEY:
         return "Error: GOOGLE_API_KEY is not set."
 
-    # Try different model versions that are currently available
+    # Updated list to match the WORKING models from your test
     models_to_try = [
-        "gemini-1.5-flash",
-        "gemini-1.5-flash-latest",
-        "gemini-1.5-pro",
-        "gemini-pro-vision"
+        "gemini-2.0-flash",
+        "gemini-2.5-flash",
+        "gemini-2.5-pro"
     ]
 
     try:
@@ -48,12 +47,12 @@ def analyze_image(image_file):
 
         prompt = """Analyze this image for social media content creation. Please provide:
         
-        1. A detailed description of what you see in the image
-        2. The overall mood and atmosphere 
-        3. Key objects, people, or elements present
-        4. The setting or environment
-        5. Colors and visual style
-        6. Any emotions or feelings the image conveys
+        1. A detailed description of what you see in the image 
+        2. The overall mood and atmosphere  
+        3. Key objects, people, or elements present 
+        4. The setting or environment 
+        5. Colors and visual style 
+        6. Any emotions or feelings the image conveys 
         
         Make your analysis engaging and suitable for social media content creation."""
 
