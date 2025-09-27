@@ -13,12 +13,11 @@ def generate_content(description):
     if not API_KEY:
         return "Error: GOOGLE_API_KEY is not set."
 
-    # Try different model versions that are currently available
+    # Updated list to match the WORKING models from your test
     models_to_try = [
-        "gemini-1.5-flash",
-        "gemini-1.5-flash-latest",
-        "gemini-1.5-pro",
-        "gemini-1.0-pro"
+        "gemini-2.0-flash",
+        "gemini-2.5-flash",
+        "gemini-2.5-pro"
     ]
 
     prompt = f"""Based on this image description: "{description}"
