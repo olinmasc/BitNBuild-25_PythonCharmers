@@ -1,0 +1,10 @@
+# Environment variables - Keep secrets out!
+.env
+
+# Python virtual environment folder
+.venv/
+venv/
+
+# Python cache files
+__pycache__/
+*.pyc
