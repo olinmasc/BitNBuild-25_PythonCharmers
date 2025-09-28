@@ -3,6 +3,18 @@ from PIL import Image
 import time
 from vision import analyze_image
 from language import generate_content
+import google.generativeai as genai  # <-- ADD THIS IMPORT
+
+# --- API KEY CONFIGURATION ---
+# This block reads the secret key from the Streamlit dashboard
+try:
+    api_key = st.secrets["GOOGLE_API_KEY"]
+    genai.configure(api_key=api_key)
+except (KeyError, FileNotFoundError):
+    st.error("❌ Error: GOOGLE_API_KEY is not set in Streamlit secrets.")
+    st.info("Please add your Google API key to the Streamlit secrets manager.")
+    st.stop()  # Stops the app from running further if the key is not found
+# -----------------------------
 
 # --- Page Configuration ---
 st.set_page_config(
