@@ -19,7 +19,7 @@ except (KeyError, FileNotFoundError):
 # --- Page Configuration ---
 st.set_page_config(
     page_title="Social Spark AI",
-    page_icon="✨",
+    page_icon="https://raw.githubusercontent.com/olinmasc/BitNBuild-25_PythonCharmers/main/assets/logo.png",
     layout="wide"
 )
 
